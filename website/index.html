@@ -32,20 +32,31 @@
      <header class="header" data-header>
         <div class="container">
 
-            <div class="overlay" data-overlay></div>
+            <div class="overlay" data-overlay>
 
-            <a href="./index.html" class="logo">
-                <img src="../images/favicon.svg" alt="FilmeOnline logo">
-            </a>
+                <a href="./index.html" class="logo">
+                    <img src="../images/favicon.svg" alt="FilmeOnline logo">  <!-- poza site-ului cu link la home -->
+                </a>
 
-            <div class="hero-actions">
+                <div class="hero-actions">
 
-                <button class="serarch-btn">
-                    <ion-icon name="search-outline"></ion-icon><ion-icon name="search-outline"></ion-icon>
-                </button>
+                    <button class="serarch-btn">
+                        <ion-icon name="search-outline"></ion-icon>   <!-- ionicon e o librarie de iconiten-->
+                    </button>
 
-                <div class="lang-wrapper">
-                    <label for="language"></label>
+                    <div class="lang-wrapper">
+                        <label for="language">
+                            <ion-icon name="globe-outline"></ion-icon>
+                        </label>
+
+                        <select name="language" id="language">
+                            <option value="EN">EN</option>
+                            <option value="AU">AU</option>
+                            <option value="AR">AR</option>
+                            <option value="RO">RO</option>
+                        </select>
+                    </div>
+
                 </div>
 
             </div>
