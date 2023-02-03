@@ -51,5 +51,50 @@
 *, *::before, *::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;  /* tine de padding si margin */
 }
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+a,
+img,
+span,
+input,
+button,
+ion-icon{
+    display: block;    /* fiecare elem o sa aiba block-ul lui si o sa fie displayed pe o linie noua */
+}
+
+input {
+    font:inherit;
+    width: 100%;
+    border: none;
+}
+
+select,
+button{
+    font: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+html{
+    font-family: var(--ff-poppins);
+    scroll-behavior: smooth;
+}
+
+body{
+    background: var(--eerie-black);
+}
+
+body.active{
+    overflow: hidden;
+}
+
