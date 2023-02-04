@@ -98,3 +98,36 @@ body.active{
     overflow: hidden;
 }
 
+/*  REUSED STYLES  */
+
+.container {
+    padding-inline: 15px;
+}
+
+
+
+
+
+
+/*  HEADER  */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-block: 25px;
+    transition: var(--transition-2);
+    z-index: 4;       /* pozitia daca e overlapped */
+}
+
+.header.active {
+    background: var(--eerie-black);
+    padding-block: 20px;
+}
+
+.header .container{
+    display: flex;    /* pt resizing */
+    justify-content: space-between;
+    align-items: center;
+}
