@@ -98,10 +98,134 @@ body.active{
     overflow: hidden;
 }
 
-/*  REUSED STYLES  */
+
+
+
+
+/*  REUSED STYLES ------------------------------------- */
 
 .container {
     padding-inline: 15px;
+}
+
+/* titles & subtitles */
+
+.h1,
+.h2,
+.h3{
+    color: var(--white);
+    line-height: 1.2;
+}
+
+.h1{ font-size: var(--fs-1); }
+
+.h2{ font-size: var(--fs-2); }
+
+.h3{ font-size: var(--fs-6); }
+
+.hero-featured{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.title-img{
+    width: 300px;
+    height: 200px;
+    margin-bottom: 30px;
+}
+
+/* Badge */
+
+.badge{
+    color: var(--white);
+    font-size: var(--fs-12);
+    font-weight: var(--fw-700);
+    border: 2px solid transparent;
+    padding: 2px 10px;
+}
+
+.badge-fill{
+    background: var(--white);
+    color: var(--raisin-black);
+}
+
+.badge-outline{
+    border-color: var(--white);
+}
+
+/* Movie Meta */
+
+.meta-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px 25px;
+    margin-bottom: 50px;
+}
+
+.badge-wrapper,
+.genre-wrapper,
+.date-time{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px 10px;
+}
+
+.genre-wrapper > a{
+    color: var(--gainsboro);
+    font-size: var(--fs-9);
+    font-weight: var(--fw-500);
+    transition: var(--transition-1);
+}
+
+.genre-wrapper > a:is(:hover, :focus){
+    color: var(--citrine);
+}
+
+.date-time {
+    gap: 15px;
+}
+
+.date-time > div {     /* > aftecteaza doar copilul direct, nu si copii lui */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--gainsboro);
+    font-size: var(--fs-9);
+    font-weight: var(--fw-500);
+}
+
+.date-time ion-icon{
+    --ionicon-stroke-width: 50px;
+    color: var(--citrine);
+}
+
+/* Buttons */
+
+.btn {
+    color: var(--white);
+    font-size: var(--fs-11);
+    font-weight: var(--fw-700);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 30px;
+    border: 2px solid var(--citrine);
+    border-radius: 50px;
+    transition: var(--transition-1)
+}
+
+btn > ion-icon {
+    font-size: 18px;
+}
+
+.btn-primary:is(:hover, :focus){
+    background: var(--citrine);
+    color: var(--xiketic);
 }
 
 
@@ -109,7 +233,9 @@ body.active{
 
 
 
-/*  HEADER  */
+
+
+/*  HEADER ------------------------------------- */
 
 .header {
     position: fixed;
@@ -130,4 +256,139 @@ body.active{
     display: flex;    /* pt resizing */
     justify-content: space-between;
     align-items: center;
+}
+
+.header-actions {
+    display: none;
+}
+
+.menu-open-btn{
+    color: var(--white);
+    font-size: 40px;
+}
+
+.navbar{
+    position: fixed;
+    top: 0;
+    right: -300px;
+    background: var(--eerie-black);
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    box-shadow: -1px 0 3px hsl(0, 0%, 0%, 0.2);    /* culoarea shadow-ului */
+    transition: 0.15s ease-in;
+    visibility: hidden;
+    z-index: 3;
+}
+
+.navbar.active {
+    right: 0;
+    visibility: visible;
+    transition: 0.25s ease-out;
+}
+
+.navbar-top{
+    padding: 30px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-close-btn {
+    color: var(--white);
+    font-size: 25px;
+    padding: 5px;
+}
+
+.menu-close-btn ion-icon{
+    --iconicon-stroke-width: 80px;
+}
+
+.navbar-list{
+    border-top: 1px solid hsla(0, 0%, 100%, 0.1);
+    margin-bottom: 30px;
+}
+
+.navbar-link {    /* optiunile din navabar menu */
+    color: var(--white);
+    font-size: var(--fs-8);
+    font-weight: var(--fw-500);
+    padding: 10px 25px;
+    border-bottom: 1px solid hsla(0, 0% 100% 0.1);
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+    transition: var(--transition-1);
+}
+
+.navbar-link:is(:hover, :focus){
+    color: var(--citrine);     /*  culoarea de hover pe meniul din navbar */
+}
+
+.navbar-social-list{
+    display: flex;   /* le pune unul langa altul */
+    justify-content: center;   /* flex si asta le pun in centru */
+    align-items: center;
+    gap: 20px;   /* intre ele */
+}
+
+.navbar-social-link{
+    font-size: 20px;
+    color: var(--white);
+    transition: var(--transition-1);
+}
+
+.navbar-social-link:is(:hover, :focus){
+    color: var(--citrine);      /* hover pe social icons */
+}
+
+.overlay{     /* nu-mi e ft clar ce e */
+    position: fixed;
+    inset: 0;
+    background: hsla(204, 18%, 11%, 0.8);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+    transition: var(--transition-2);
+}
+
+.overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+
+
+/*  HERO  */
+
+.hero{
+    background: url("../images/thor-bg.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 750px;
+    height: 100vh;
+    max-width: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-block: var(--section-padding);
+    box-shadow: inset 600px 0 1000px 0px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content{
+    margin-top: 60px;
+}
+
+.hero-subtitile{
+    color: var(--citrine);
+    font-size: var(--fs-4);
+    font-weight: var(--fw-700);
+    margin-bottom: 10px;
+}
+
+.hero-title{
+    margin-bottom: 30px;
+}
+
+.hero-title > strong{
+    color: var(--citrine)
 }
