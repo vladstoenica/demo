@@ -29,3 +29,32 @@ const header = document.querySelector("[data-header]");
 window.addEventListener("scroll", function(){
     this.window.scrollY >= 10? header.classList.add("active") : header.classList.remove("active");
 });
+
+
+let hero = document.querySelector(".hero");
+let heroVideo = document.querySelector(".hero-video");
+let playBtn = document.getElementById("play");
+
+play.addEventListener("mouseenter", function() {
+    hero.style.background = "none";
+    heroVideo.style.display = "block";
+    heroVideo.play();
+    // heroVideo.currentTime = 0;
+});
+
+play.addEventListener("mouseleave", function() {
+    hero.style.background = "url(../images/thor-bg.png)";
+    hero.style.background = "url(../images/thor-bg.png)";
+    hero.style.backgroundSize = "cover";
+    hero.style.backgroundPosition = "center";
+    hero.style.minHeight = "750px";
+    hero.style.height = "100vh";
+    hero.style.maxWidth = "auto";
+    hero.style.display = "flex";
+    hero.style.justifyContent = "flex-start";
+    hero.style.alignItems = "center";
+    hero.style.paddingBlock = "var(--section-padding)";
+    hero.style.boxShadow = "inset 600px 0 1000px 0px rgba(0, 0, 0, 0.4)";
+    heroVideo.style.display = "none";
+    heroVideo.pause();
+});
