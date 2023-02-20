@@ -1153,5 +1153,32 @@ btn > ion-icon {
         max-width: unset;
         width: 100%;
     }
+
+    /* MOVIE DETAIL */
+
+    .movie-detail {
+        padding-bottom: 200px;
+    }
+
+    .movie-detail .container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .movie-detail-banner,
+    .detail-actions {
+        margin: 0;
+    }
+
+    .download-btn {
+        position: absolute;
+        left: 15px;
+        bottom: -80px;
+    }
     
 }
+
+
+/* media > 1200 */
